@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/home/b556/repo/kk_w08/development/samples/BluetoothLeGatt/BluetoothLeGattSample/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/home/b556/repo/kk_w08/development/samples/BluetoothLeGatt/BluetoothLeGattSample/src/debug/assets" />
+    </dataSet>
+
+</merger>
