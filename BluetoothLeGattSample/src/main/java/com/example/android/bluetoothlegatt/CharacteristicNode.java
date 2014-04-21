@@ -1,7 +1,10 @@
 package com.example.android.bluetoothlegatt;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattDescriptor;
 
     public class CharacteristicNode {
 
@@ -9,7 +12,7 @@ import android.bluetooth.BluetoothGattCharacteristic;
         private String uuid;
         private int properties;
         private int permissions;
-        private ArrayList<DescriptorNode> mDescriptors = new ArrayList<DescriptorNode>();
+        private List<BluetoothGattDescriptor> mDescriptors = new ArrayList<BluetoothGattDescriptor>();
         private BluetoothGattCharacteristic characteristic;
 
         public String getName() {
@@ -45,5 +48,15 @@ import android.bluetooth.BluetoothGattCharacteristic;
         public BluetoothGattCharacteristic getChara() {
             return characteristic; 
         }
+
+        public List<BluetoothGattDescriptor> getDescriptors() {
+            mDescriptors = characteristic.getDescriptors();
+            return mDescriptors;
+        }
+
+        public int getDescCount() {
+            return mDescriptors.size(); 
+        }
+
     }
 
